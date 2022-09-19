@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtJson = new System.Windows.Forms.TextBox();
             this.btnValidate = new System.Windows.Forms.Button();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtPaste = new System.Windows.Forms.Button();
             this.txtClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtJson = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rtxtResult = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -44,17 +44,6 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtJson
-            // 
-            this.txtJson.AcceptsReturn = true;
-            this.txtJson.AcceptsTab = true;
-            this.txtJson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtJson.Location = new System.Drawing.Point(0, 0);
-            this.txtJson.Multiline = true;
-            this.txtJson.Name = "txtJson";
-            this.txtJson.Size = new System.Drawing.Size(288, 428);
-            this.txtJson.TabIndex = 3;
             // 
             // btnValidate
             // 
@@ -105,6 +94,7 @@
             this.txtClear.TabIndex = 4;
             this.txtClear.Text = "Clear";
             this.txtClear.UseVisualStyleBackColor = true;
+            this.txtClear.Click += new System.EventHandler(this.txtClear_Click);
             // 
             // panel1
             // 
@@ -115,6 +105,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 685);
             this.panel1.TabIndex = 7;
+            // 
+            // txtJson
+            // 
+            this.txtJson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtJson.Location = new System.Drawing.Point(0, 0);
+            this.txtJson.Name = "txtJson";
+            this.txtJson.Size = new System.Drawing.Size(288, 428);
+            this.txtJson.TabIndex = 5;
+            this.txtJson.Text = "";
             // 
             // panel2
             // 
@@ -175,8 +174,6 @@
         }
 
         #endregion
-
-        private TextBox txtJson;
         private Button btnValidate;
         private TextBox txtOutput;
         private FlowLayoutPanel flowLayoutPanel1;
@@ -187,5 +184,6 @@
         private Panel panel3;
         private Label label1;
         private RichTextBox rtxtResult;
+        private RichTextBox txtJson;
     }
 }
