@@ -1,12 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace JsonValidator.App.Services
 {
     public class JsonFormaterService
     {
+        private readonly JsonValidatorService jsonValidatorService;
+
+        public JsonFormaterService(JsonValidatorService jsonValidatorService)
+        {
+            this.jsonValidatorService = jsonValidatorService;
+        }
+
+        public (ValidationInfo ValidationInfo, string formated) FormatJson(string json)
+        {
+            ValidationInfo validationInfo = this.jsonValidatorService.ValidateJson(json);
+
+            if (validationInfo.IsSuccessful == false)
+            {
+                return (validationInfo, "");
+            }
+
+            dynamic? parsedJson = JsonSerializer.Deserialize<dynamic>(json);
+
+            var res = JsonSerializer.Serialize(parsedJson!, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            return (ValidationInfo.Successful(), res);
+        }
     }
 }

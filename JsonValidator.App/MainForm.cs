@@ -6,14 +6,17 @@ namespace JsonValidator.App
     {
         private readonly JsonValidatorService jsonValidatorService;
         private readonly RichTextBoxService richTextBoxService;
+        private readonly JsonFormaterService jsonFormaterService;
 
         public MainForm(
             JsonValidatorService jsonValidatorService,
-            RichTextBoxService richTextBoxService)
+            RichTextBoxService richTextBoxService,
+            JsonFormaterService jsonFormaterService)
         {
             InitializeComponent();
             this.jsonValidatorService = jsonValidatorService;
             this.richTextBoxService = richTextBoxService;
+            this.jsonFormaterService = jsonFormaterService;
         }
 
         private void BtnValidateClick(object sender, EventArgs e)
@@ -23,8 +26,6 @@ namespace JsonValidator.App
             ValidationInfo res = jsonValidatorService.ValidateJson(this.txtJson.Text);
 
             this.HandleResults(res);
-
-            WriteOutput(res.Message);
         }
 
         private void HandleResults(ValidationInfo res)
@@ -38,6 +39,8 @@ namespace JsonValidator.App
                 SetStatusLabel("INVALID!", Color.White, Color.Red);
                 this.richTextBoxService.HighlightError(this.rtxtResult, res.Line, res.ByteInLine);
             }
+
+            WriteOutput(res.Message);
         }
 
         private void SetStatusLabel(
@@ -80,6 +83,19 @@ namespace JsonValidator.App
             this.Clear();
             string clipboard = Clipboard.GetText();
             this.txtJson.Text = clipboard;
+        }
+
+        private void BtnFormatClick(object sender, EventArgs e)
+        {
+            (ValidationInfo valInfo, string formatted) = this.jsonFormaterService.FormatJson(this.txtJson.Text);
+
+            if (valInfo.IsSuccessful == false)
+            {
+                this.HandleResults(valInfo);
+                return;
+            }
+
+            this.txtJson.Text = formatted;
         }
     }
 }

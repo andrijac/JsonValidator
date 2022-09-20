@@ -12,11 +12,15 @@ namespace JsonValidator.App
         {
             JsonValidatorService jsonValidatorService = new();
             RichTextBoxService richTextBoxService = new();
+            JsonFormaterService jsonFormaterService = new(jsonValidatorService);
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm(jsonValidatorService, richTextBoxService));
+            Application.Run(new MainForm(
+                jsonValidatorService,
+                richTextBoxService,
+                jsonFormaterService));
         }
     }
 }

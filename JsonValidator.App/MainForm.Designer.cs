@@ -33,13 +33,13 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClearPaste = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnFormat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtJson = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rtxtResult = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnFormat = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,6 +98,16 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.BtnClearClick);
             // 
+            // btnFormat
+            // 
+            this.btnFormat.Location = new System.Drawing.Point(297, 3);
+            this.btnFormat.Name = "btnFormat";
+            this.btnFormat.Size = new System.Drawing.Size(75, 23);
+            this.btnFormat.TabIndex = 5;
+            this.btnFormat.Text = "Format";
+            this.btnFormat.UseVisualStyleBackColor = true;
+            this.btnFormat.Click += new System.EventHandler(this.BtnFormatClick);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtJson);
@@ -155,16 +165,6 @@
             this.lblStatus.Size = new System.Drawing.Size(0, 15);
             this.lblStatus.TabIndex = 0;
             // 
-            // btnFormat
-            // 
-            this.btnFormat.Location = new System.Drawing.Point(297, 3);
-            this.btnFormat.Name = "btnFormat";
-            this.btnFormat.Size = new System.Drawing.Size(75, 23);
-            this.btnFormat.TabIndex = 5;
-            this.btnFormat.Text = "Format";
-            this.btnFormat.UseVisualStyleBackColor = true;
-            this.btnFormat.Visible = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "JSON Validator";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
