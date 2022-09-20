@@ -1,3 +1,5 @@
+using JsonValidator.App.Services;
+
 namespace JsonValidator.App
 {
     internal static class Program
@@ -8,10 +10,13 @@ namespace JsonValidator.App
         [STAThread]
         private static void Main()
         {
+            JsonValidatorService jsonValidatorService = new();
+            RichTextBoxService richTextBoxService = new();
+
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            Application.Run(new MainForm(jsonValidatorService, richTextBoxService));
         }
     }
 }

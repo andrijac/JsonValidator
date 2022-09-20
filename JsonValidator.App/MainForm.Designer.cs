@@ -31,14 +31,15 @@
             this.btnValidate = new System.Windows.Forms.Button();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtPaste = new System.Windows.Forms.Button();
-            this.txtClear = new System.Windows.Forms.Button();
+            this.btnClearPaste = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtJson = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rtxtResult = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.btnFormat = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,37 +65,38 @@
             this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(288, 257);
             this.txtOutput.TabIndex = 4;
-            this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnValidate);
-            this.flowLayoutPanel1.Controls.Add(this.txtPaste);
-            this.flowLayoutPanel1.Controls.Add(this.txtClear);
+            this.flowLayoutPanel1.Controls.Add(this.btnClearPaste);
+            this.flowLayoutPanel1.Controls.Add(this.btnClear);
+            this.flowLayoutPanel1.Controls.Add(this.btnFormat);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(708, 28);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // txtPaste
+            // btnClearPaste
             // 
-            this.txtPaste.Location = new System.Drawing.Point(84, 3);
-            this.txtPaste.Name = "txtPaste";
-            this.txtPaste.Size = new System.Drawing.Size(75, 23);
-            this.txtPaste.TabIndex = 3;
-            this.txtPaste.Text = "Paste";
-            this.txtPaste.UseVisualStyleBackColor = true;
+            this.btnClearPaste.Location = new System.Drawing.Point(84, 3);
+            this.btnClearPaste.Name = "btnClearPaste";
+            this.btnClearPaste.Size = new System.Drawing.Size(126, 23);
+            this.btnClearPaste.TabIndex = 3;
+            this.btnClearPaste.Text = "Clear and Paste";
+            this.btnClearPaste.UseVisualStyleBackColor = true;
+            this.btnClearPaste.Click += new System.EventHandler(this.BtnClearPasteClick);
             // 
-            // txtClear
+            // btnClear
             // 
-            this.txtClear.Location = new System.Drawing.Point(165, 3);
-            this.txtClear.Name = "txtClear";
-            this.txtClear.Size = new System.Drawing.Size(75, 23);
-            this.txtClear.TabIndex = 4;
-            this.txtClear.Text = "Clear";
-            this.txtClear.UseVisualStyleBackColor = true;
-            this.txtClear.Click += new System.EventHandler(this.txtClear_Click);
+            this.btnClear.Location = new System.Drawing.Point(216, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClearClick);
             // 
             // panel1
             // 
@@ -137,21 +139,31 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblStatus);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 20);
             this.panel3.TabIndex = 9;
             // 
-            // label1
+            // lblStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 15);
-            this.label1.TabIndex = 0;
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblStatus.Location = new System.Drawing.Point(0, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 15);
+            this.lblStatus.TabIndex = 0;
+            // 
+            // btnFormat
+            // 
+            this.btnFormat.Location = new System.Drawing.Point(297, 3);
+            this.btnFormat.Name = "btnFormat";
+            this.btnFormat.Size = new System.Drawing.Size(75, 23);
+            this.btnFormat.TabIndex = 5;
+            this.btnFormat.Text = "Format";
+            this.btnFormat.UseVisualStyleBackColor = true;
+            this.btnFormat.Visible = false;
             // 
             // MainForm
             // 
@@ -177,13 +189,14 @@
         private Button btnValidate;
         private TextBox txtOutput;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button txtPaste;
-        private Button txtClear;
+        private Button btnClearPaste;
+        private Button btnClear;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
-        private Label label1;
+        private Label lblStatus;
         private RichTextBox rtxtResult;
         private RichTextBox txtJson;
+        private Button btnFormat;
     }
 }
