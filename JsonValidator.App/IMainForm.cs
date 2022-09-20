@@ -2,14 +2,14 @@
 {
     public interface IMainForm
     {
-        Button BtnValidate { get; }
+        ToolStripButton BtnValidate { get; }
         RichTextBox TxtJson { get; }
         RichTextBox TxtResult { get; }
-        Button BtnFormat { get; }
-        Label LblStatus { get; }
+        ToolStripButton BtnFormat { get; }
+        ToolStripStatusLabel LblStatus { get; }
         TextBox TxtOutput { get; }
         Color BackColor { get; }
-        Button BtnClearPaste { get; }
-        Button BtnClear { get; }
+        ToolStripButton BtnClearPaste { get; }
+        ToolStripButton BtnClear { get; }
     }
 }

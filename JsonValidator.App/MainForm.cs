@@ -11,20 +11,25 @@
             formLogic.InitControls();
         }
 
-        public Button BtnValidate => this.btnValidate;
+        public ToolStripButton BtnValidate => this.tsValidate;
+
+        public ToolStripButton BtnFormat => this.tsFormat;
+
+        public ToolStripButton BtnClearPaste => this.tsClearPaste;
+
+        public ToolStripButton BtnClear => this.tsClear;
 
         public RichTextBox TxtJson => this.txtJson;
 
         public RichTextBox TxtResult => this.txtResult;
 
-        public Button BtnFormat => this.btnFormat;
-
-        public Label LblStatus => this.lblStatus;
+        public ToolStripStatusLabel LblStatus => this.bottomStatusLabel;
 
         public TextBox TxtOutput => this.txtOutput;
 
-        public Button BtnClearPaste => this.btnClearPaste;
-
-        public Button BtnClear => this.btnClear;
+        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

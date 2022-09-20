@@ -17,3 +17,7 @@ namespace JsonValidator.App
         }
     }
 }
+
+// TODO: console mode.
+// TODO: UI rearrange
+// JSON options
