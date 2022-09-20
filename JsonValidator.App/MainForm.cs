@@ -30,6 +30,8 @@ namespace JsonValidator.App
 
         private void HandleResults(ValidationInfo res)
         {
+            this.rtxtResult.Text = this.txtJson.Text;
+
             if (res.IsSuccessful)
             {
                 SetStatusLabel("VALID!", Color.White, Color.Green);
@@ -41,6 +43,11 @@ namespace JsonValidator.App
             }
 
             WriteOutput(res.Message);
+
+            this.richTextBoxService.ScrollToLine(
+                this.rtxtResult,
+                res.Line.HasValue ? (int)res.Line : 0,
+                res.ByteInLine.HasValue ? (int)res.ByteInLine : 0);
         }
 
         private void SetStatusLabel(
@@ -66,7 +73,7 @@ namespace JsonValidator.App
         private void ResetBeforeValidate()
         {
             this.txtOutput.Text = "";
-            this.rtxtResult.Text = this.txtJson.Text;
+            this.rtxtResult.Text = "";
             this.lblStatus.BackColor = this.BackColor;
         }
 

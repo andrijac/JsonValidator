@@ -58,6 +58,7 @@
             // 
             // txtOutput
             // 
+            this.txtOutput.BackColor = System.Drawing.Color.White;
             this.txtOutput.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtOutput.Location = new System.Drawing.Point(0, 428);
             this.txtOutput.Multiline = true;
@@ -120,7 +121,9 @@
             // 
             // txtJson
             // 
+            this.txtJson.BackColor = System.Drawing.Color.White;
             this.txtJson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtJson.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtJson.Location = new System.Drawing.Point(0, 0);
             this.txtJson.Name = "txtJson";
             this.txtJson.Size = new System.Drawing.Size(288, 428);
@@ -139,7 +142,9 @@
             // 
             // rtxtResult
             // 
+            this.rtxtResult.BackColor = System.Drawing.Color.White;
             this.rtxtResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtxtResult.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rtxtResult.Location = new System.Drawing.Point(0, 20);
             this.rtxtResult.Name = "rtxtResult";
             this.rtxtResult.ReadOnly = true;
