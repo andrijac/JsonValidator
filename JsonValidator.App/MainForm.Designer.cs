@@ -71,8 +71,8 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnValidate);
             this.flowLayoutPanel1.Controls.Add(this.btnClearPaste);
-            this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Controls.Add(this.btnFormat);
+            this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -91,7 +91,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(216, 3);
+            this.btnClear.Location = new System.Drawing.Point(297, 3);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             // btnFormat
             // 
-            this.btnFormat.Location = new System.Drawing.Point(297, 3);
+            this.btnFormat.Location = new System.Drawing.Point(216, 3);
             this.btnFormat.Name = "btnFormat";
             this.btnFormat.Size = new System.Drawing.Size(75, 23);
             this.btnFormat.TabIndex = 5;
