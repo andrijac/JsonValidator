@@ -87,6 +87,8 @@ namespace JsonValidator.App
 
         private void BtnFormatClick(object sender, EventArgs e)
         {
+            ResetBeforeValidate();
+
             (ValidationInfo valInfo, string formatted) = this.jsonFormaterService.FormatJson(this.txtJson.Text);
 
             if (valInfo.IsSuccessful == false)
