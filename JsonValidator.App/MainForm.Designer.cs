@@ -32,12 +32,12 @@
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClearPaste = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnFormat = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtJson = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rtxtResult = new System.Windows.Forms.RichTextBox();
+            this.txtResult = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
@@ -54,7 +54,6 @@
             this.btnValidate.TabIndex = 2;
             this.btnValidate.Text = "V&alidate";
             this.btnValidate.UseVisualStyleBackColor = true;
-            this.btnValidate.Click += new System.EventHandler(this.BtnValidateClick);
             // 
             // txtOutput
             // 
@@ -87,17 +86,6 @@
             this.btnClearPaste.TabIndex = 3;
             this.btnClearPaste.Text = "Clear and Paste";
             this.btnClearPaste.UseVisualStyleBackColor = true;
-            this.btnClearPaste.Click += new System.EventHandler(this.BtnClearPasteClick);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(297, 3);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BtnClearClick);
             // 
             // btnFormat
             // 
@@ -107,7 +95,15 @@
             this.btnFormat.TabIndex = 5;
             this.btnFormat.Text = "Format";
             this.btnFormat.UseVisualStyleBackColor = true;
-            this.btnFormat.Click += new System.EventHandler(this.BtnFormatClick);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(297, 3);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -133,7 +129,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.rtxtResult);
+            this.panel2.Controls.Add(this.txtResult);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(288, 28);
@@ -141,17 +137,17 @@
             this.panel2.Size = new System.Drawing.Size(420, 685);
             this.panel2.TabIndex = 9;
             // 
-            // rtxtResult
+            // txtResult
             // 
-            this.rtxtResult.BackColor = System.Drawing.Color.White;
-            this.rtxtResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtxtResult.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rtxtResult.Location = new System.Drawing.Point(0, 20);
-            this.rtxtResult.Name = "rtxtResult";
-            this.rtxtResult.ReadOnly = true;
-            this.rtxtResult.Size = new System.Drawing.Size(420, 665);
-            this.rtxtResult.TabIndex = 10;
-            this.rtxtResult.Text = "";
+            this.txtResult.BackColor = System.Drawing.Color.White;
+            this.txtResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtResult.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtResult.Location = new System.Drawing.Point(0, 20);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.Size = new System.Drawing.Size(420, 665);
+            this.txtResult.TabIndex = 10;
+            this.txtResult.Text = "";
             // 
             // panel3
             // 
@@ -201,7 +197,7 @@
         private Panel panel2;
         private Panel panel3;
         private Label lblStatus;
-        private RichTextBox rtxtResult;
+        private RichTextBox txtResult;
         private RichTextBox txtJson;
         private Button btnFormat;
     }
