@@ -121,6 +121,7 @@
             // 
             // txtJson
             // 
+            this.txtJson.AcceptsTab = true;
             this.txtJson.BackColor = System.Drawing.Color.White;
             this.txtJson.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtJson.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

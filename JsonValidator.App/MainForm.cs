@@ -14,9 +14,55 @@ namespace JsonValidator.App
             JsonFormaterService jsonFormaterService)
         {
             InitializeComponent();
+
+            SetDropEvents(this);
+            SetDropEvents(this.txtJson);
+            SetDropEvents(this.rtxtResult);
+
             this.jsonValidatorService = jsonValidatorService;
             this.richTextBoxService = richTextBoxService;
             this.jsonFormaterService = jsonFormaterService;
+        }
+
+        private void SetDropEvents(Control control)
+        {
+            control.AllowDrop = true;
+            control.DragDrop += new DragEventHandler(FormDragDrop);
+            control.DragEnter += new DragEventHandler(FormDragEnter);
+        }
+
+        private void FormDragEnter(object? sender, DragEventArgs e)
+        {
+            if (e.Data == null)
+            {
+                return;
+            }
+
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
+
+        private void FormDragDrop(object? sender, DragEventArgs e)
+        {
+            if (e.Data == null)
+            {
+                return;
+            }
+
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+            var file = files.FirstOrDefault();
+
+            if (file == null)
+            {
+                return;
+            }
+
+            var content = File.ReadAllText(file);
+
+            this.txtJson.Text = content;
         }
 
         private void BtnValidateClick(object sender, EventArgs e)
