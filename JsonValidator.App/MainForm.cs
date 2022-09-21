@@ -31,5 +31,11 @@
         {
             Application.Exit();
         }
+
+        private void AboutToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            About about = new();
+            about.ShowDialog();
+        }
     }
 }

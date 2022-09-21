@@ -31,27 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtJson = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtOutput = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.bottomStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelInput = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtResult = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtOutput = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsValidate = new System.Windows.Forms.ToolStripButton();
             this.tsClearPaste = new System.Windows.Forms.ToolStripButton();
             this.tsFormat = new System.Windows.Forms.ToolStripButton();
             this.tsClear = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.bottomStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +58,7 @@
             this.panelInput.SuspendLayout();
             this.panel3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,49 +70,22 @@
             this.txtJson.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtJson.Location = new System.Drawing.Point(0, 15);
             this.txtJson.Name = "txtJson";
-            this.txtJson.Size = new System.Drawing.Size(474, 642);
+            this.txtJson.Size = new System.Drawing.Size(474, 533);
             this.txtJson.TabIndex = 5;
             this.txtJson.Text = "";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtOutput);
-            this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Controls.Add(this.splitContainer1);
+            this.panel2.Controls.Add(this.txtOutput);
             this.panel2.Controls.Add(this.toolStrip1);
+            this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(940, 706);
             this.panel2.TabIndex = 9;
-            // 
-            // txtOutput
-            // 
-            this.txtOutput.BackColor = System.Drawing.Color.White;
-            this.txtOutput.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtOutput.Location = new System.Drawing.Point(0, 597);
-            this.txtOutput.Multiline = true;
-            this.txtOutput.Name = "txtOutput";
-            this.txtOutput.ReadOnly = true;
-            this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOutput.Size = new System.Drawing.Size(940, 87);
-            this.txtOutput.TabIndex = 4;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bottomStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 684);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(940, 22);
-            this.statusStrip1.TabIndex = 19;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // bottomStatusLabel
-            // 
-            this.bottomStatusLabel.Name = "bottomStatusLabel";
-            this.bottomStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // splitContainer1
             // 
@@ -127,7 +100,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel3);
-            this.splitContainer1.Size = new System.Drawing.Size(940, 657);
+            this.splitContainer1.Size = new System.Drawing.Size(940, 548);
             this.splitContainer1.SplitterDistance = 474;
             this.splitContainer1.TabIndex = 18;
             // 
@@ -138,7 +111,7 @@
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInput.Location = new System.Drawing.Point(0, 0);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(474, 657);
+            this.panelInput.Size = new System.Drawing.Size(474, 548);
             this.panelInput.TabIndex = 15;
             // 
             // label1
@@ -158,7 +131,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(462, 657);
+            this.panel3.Size = new System.Drawing.Size(462, 548);
             this.panel3.TabIndex = 16;
             // 
             // txtResult
@@ -169,7 +142,7 @@
             this.txtResult.Location = new System.Drawing.Point(0, 15);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(462, 642);
+            this.txtResult.Size = new System.Drawing.Size(462, 533);
             this.txtResult.TabIndex = 10;
             this.txtResult.Text = "";
             // 
@@ -182,6 +155,18 @@
             this.label2.Size = new System.Drawing.Size(48, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Output:";
+            // 
+            // txtOutput
+            // 
+            this.txtOutput.BackColor = System.Drawing.Color.White;
+            this.txtOutput.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtOutput.Location = new System.Drawing.Point(0, 597);
+            this.txtOutput.Multiline = true;
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.ReadOnly = true;
+            this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtOutput.Size = new System.Drawing.Size(940, 87);
+            this.txtOutput.TabIndex = 4;
             // 
             // toolStrip1
             // 
@@ -202,7 +187,7 @@
             this.tsValidate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsValidate.Name = "tsValidate";
             this.tsValidate.Size = new System.Drawing.Size(68, 22);
-            this.tsValidate.Text = "Validate";
+            this.tsValidate.Text = "&Validate";
             // 
             // tsClearPaste
             // 
@@ -227,6 +212,21 @@
             this.tsClear.Name = "tsClear";
             this.tsClear.Size = new System.Drawing.Size(54, 22);
             this.tsClear.Text = "Clear";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bottomStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 684);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(940, 22);
+            this.statusStrip1.TabIndex = 19;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // bottomStatusLabel
+            // 
+            this.bottomStatusLabel.Name = "bottomStatusLabel";
+            this.bottomStatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // menuStrip1
             // 
@@ -265,8 +265,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
             // 
             // MainForm
             // 
@@ -280,8 +281,6 @@
             this.Text = "JSON Validator";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -292,6 +291,8 @@
             this.panel3.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
