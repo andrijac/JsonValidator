@@ -1,4 +1,5 @@
-﻿using JsonValidator.App.Services;
+﻿using JsonValidator.App.Models;
+using JsonValidator.App.Services;
 
 namespace JsonValidator.App
 {

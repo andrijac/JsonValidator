@@ -1,4 +1,4 @@
-﻿namespace JsonValidator.App
+﻿namespace JsonValidator.App.Models
 {
     public interface IMainForm
     {

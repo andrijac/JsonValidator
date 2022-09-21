@@ -1,4 +1,6 @@
-﻿namespace JsonValidator.App
+﻿using JsonValidator.App.Models;
+
+namespace JsonValidator.App
 {
     public partial class MainForm : Form, IMainForm
     {

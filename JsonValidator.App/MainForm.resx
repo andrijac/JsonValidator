@@ -60,15 +60,6 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>237, 17</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tsValidate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -84,8 +75,8 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACvSURBVDhPY8AF5OXlORQUFNYqKip+AbJXq6iosEOliANA
         jSlAjZuBGvmABm0B8pOhUoQBUPF/EAZphBqwFSYGVYIdABWsAOL9MMU4MEh+BVQLKgBJSklJCRPCIHVQ
-        Lahg1ACCgAm7ATE7HzDE7vqPF4PUAAF2A0AKordLgjE+NhBQbAAUMJHsBebANd9BmoAYnAJRDYACkCCy
-        E3GxoWqXgzUhA6AgLB/gw2h5gIEBAKYxoA3ZlR1EAAAAAElFTkSuQmCC
+        Lahg1ACCgAm7ATE7HzDE7vqPF4PUAAF2A0AKordLgjE+NhBQbAAUMJHsBeaANd9BmoAYnAJRDYACkCCy
+        E3GxoWqXgzUhA6AgLB/gw2h5gIEBAKWUoAwvTbgPAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="tsFormat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

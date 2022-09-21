@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using JsonValidator.App.Models;
 
 namespace JsonValidator.App.Services
 {

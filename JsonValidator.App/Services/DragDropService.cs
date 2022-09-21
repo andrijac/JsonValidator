@@ -1,4 +1,6 @@
-﻿namespace JsonValidator.App.Services
+﻿using JsonValidator.App.Models;
+
+namespace JsonValidator.App.Services
 {
     public class DragDropService
     {
