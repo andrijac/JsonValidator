@@ -8,9 +8,7 @@ namespace JsonValidator.App
         {
             InitializeComponent();
 
-            var formLogic = new MainFormLogic(this);
-
-            formLogic.InitControls();
+            _ = new MainFormLogic(this);
         }
 
         public ToolStripButton BtnValidate => this.tsValidate;

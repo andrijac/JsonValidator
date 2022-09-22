@@ -20,9 +20,11 @@ namespace JsonValidator.App
             this.richTextBoxService = new RichTextBoxService();
             this.jsonFormaterService = new JsonFormaterService(this.jsonValidatorService);
             this.dragDropService = new DragDropService(form);
+
+            this.InitControls();
         }
 
-        public void InitControls()
+        private void InitControls()
         {
             this.dragDropService.Init();
 
@@ -73,7 +75,7 @@ namespace JsonValidator.App
         {
             form.TxtOutput.Text = "";
             form.TxtResult.Text = "";
-            form.LblStatus.BackColor = form.BackColor;
+            SetStatusLabel("", form.BackColor, form.BackColor);
         }
 
         private void Clear()
@@ -81,7 +83,7 @@ namespace JsonValidator.App
             form.TxtOutput.Text = "";
             form.TxtResult.Text = "";
             form.TxtJson.Text = "";
-            form.LblStatus.BackColor = form.BackColor;
+            SetStatusLabel("", form.BackColor, form.BackColor);
         }
 
         #region Event handlers
