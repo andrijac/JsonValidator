@@ -5,6 +5,7 @@
         public About()
         {
             InitializeComponent();
+            SmallFormHelper.SetProperties(this);
         }
 
         private void BtnOkClick(object sender, EventArgs e)

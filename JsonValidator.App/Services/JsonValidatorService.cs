@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Nodes;
+﻿using System.Text.Json;
+using System.Text.Json.Nodes;
 using JsonValidator.App.Models;
 
 namespace JsonValidator.App.Services
@@ -19,14 +20,14 @@ namespace JsonValidator.App.Services
 
             try
             {
-                var tmpObj = JsonValue.Parse(input);
+                var tmpObj = JsonValue.Parse(input, documentOptions: AppSettings.CreateJsonDocumentOptions());
                 return ValidationInfo.Successful();
             }
             catch (FormatException fex)
             {
                 return ValidationInfo.Failed(fex.Message);
             }
-            catch (System.Text.Json.JsonException jsonex) //some other exception
+            catch (JsonException jsonex) //some other exception
             {
                 return new ValidationInfo(jsonex.Message, jsonex.LineNumber, jsonex.BytePositionInLine, false);
             }
@@ -36,12 +37,12 @@ namespace JsonValidator.App.Services
             }
         }
 
-        private bool ValidateBasicStructure(string strInput)
+        private static bool ValidateBasicStructure(string jsonInput)
         {
-            strInput = strInput.Trim();
+            jsonInput = jsonInput.Trim();
 
-            return (strInput.StartsWith("{") && strInput.EndsWith("}")) ||
-                (strInput.StartsWith("[") && strInput.EndsWith("]"));
+            return (jsonInput.StartsWith("{") && jsonInput.EndsWith("}")) ||
+                (jsonInput.StartsWith("[") && jsonInput.EndsWith("]"));
         }
     }
 }

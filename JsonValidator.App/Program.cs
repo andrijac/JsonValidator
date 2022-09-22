@@ -1,5 +1,3 @@
-using JsonValidator.App.Services;
-
 namespace JsonValidator.App
 {
     internal static class Program
@@ -19,4 +17,3 @@ namespace JsonValidator.App
 }
 
 // TODO: console mode.
-// JSON options

@@ -39,5 +39,11 @@ namespace JsonValidator.App
             About about = new();
             about.ShowDialog();
         }
+
+        private void SettingsToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new();
+            settingsForm.ShowDialog();
+        }
     }
 }

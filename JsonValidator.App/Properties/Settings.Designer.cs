@@ -38,12 +38,12 @@ namespace JsonValidator.App.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Json_SkipComments {
+        public bool Json_AllowComments {
             get {
-                return ((bool)(this["Json_SkipComments"]));
+                return ((bool)(this["Json_AllowComments"]));
             }
             set {
-                this["Json_SkipComments"] = value;
+                this["Json_AllowComments"] = value;
             }
         }
     }
